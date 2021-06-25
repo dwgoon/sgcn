@@ -1,4 +1,4 @@
-# Steganography for Complex Networks (SGCN)
+# Steganography of Complex Networks (SGCN)
 
 SGCN (**S**tegano**G**raphy of **C**omplex **N**etworks) is a Python package that presents a collection of steganographic algorithms for complex networks.
 
