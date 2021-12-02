@@ -89,5 +89,14 @@ These scripts perform the encoding simulation experiments for all datasets of OG
 
 
 
+## Citation
 
+@misc{lee2021steganography,
+      title={Steganography of Complex Networks}, 
+      author={Daewon Lee},
+      year={2021},
+      eprint={2110.10418},
+      archivePrefix={arXiv},
+      primaryClass={cs.CR}
+}
 
