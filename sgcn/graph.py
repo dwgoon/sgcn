@@ -24,8 +24,11 @@ class Graph(object):
         raise NotImplementedError()
     
     def add_edge(self, x, y):
-        raise NotImplementedError()
+        raise NotImplementedError()    
     
+    @property
+    def graph(self):
+        return self._graph
 
 
 class NetworkxGraph(Graph):    
@@ -36,8 +39,11 @@ class NetworkxGraph(Graph):
     def __eq__(self, g):
         return self.nx.is_isomorphic(self._graph, g._graph)
     
-    def degree(self, x):
-        return self._graph.degree(x)
+    def degree(self, x=None):
+        if x:
+            return self._graph.degree(x)
+        else:
+            return self._graph.degree
     
     def num_nodes(self):
         return self._graph.number_of_nodes()
@@ -67,8 +73,11 @@ class IgraphGraph(Graph):
         return self._graph.isomorphic(g._graph)
 
     def degree(self, x):
-        return self._graph.degree(x)
-    
+        if x:
+            return self._graph.degree(x)
+        else:
+            return self._graph.degree
+        
     def num_nodes(self):
         return self._graph.vcount()
     
