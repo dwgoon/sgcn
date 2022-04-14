@@ -30,8 +30,8 @@ class FileIO(object):
     def read_edgelist(self, fpath, directed=False):
         df = pd.read_csv(fpath, dtype=str)
         columns = list(df.columns)
-        columns[0] = "entity1"
-        columns[1] = "entity2"
+        columns[0] = "Source"
+        columns[1] = "Target"
         df.columns = columns
         g = self.from_pandas_dataframe(df.drop_duplicates(), directed)                  
         return g, df
